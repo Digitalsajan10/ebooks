@@ -495,17 +495,3 @@ img {
   }
 }
 
-.notification-container {
-  position: absolute;
-  top: 50px; /* Adjust this value based on your header height */
-  right: 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
-  display: none;
-}
-
-.notification-container.show {
-  display: block;
-}
