@@ -20,17 +20,35 @@
       <div class="bg__blur"></div>
 
       <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <div class="header__content">
-            <a href="#" class="header__logo">BookBud</a>
-   
-            <div class="header__actions">
-               <i class="ri-notification-2-line"></i>   
-               <div class="header__menu" id="header-menu">
-                  <i class="ri-menu-line"></i>
-               </div>
-            </div>
-         </div>
+<header class="header" id="header">
+   <div class="header__content">
+       <a href="#" class="header__logo">BookBud</a>
+
+       <div class="header__actions">
+           <i class="ri-notification-2-line" id="notification-icon"></i>
+           <div class="header__menu" id="header-menu">
+               <i class="ri-menu-line"></i>
+           </div>
+       </div>
+   </div>
+</header>
+
+<!-- Notification Container -->
+<div class="notification-container" id="notification-container">
+   <!-- Your notification content goes here -->
+   <div class="notification">New notification!</div>
+</div>
+
+<script>
+   // JavaScript to toggle notification visibility
+   const notificationIcon = document.getElementById('notification-icon');
+   const notificationContainer = document.getElementById('notification-container');
+
+   notificationIcon.addEventListener('click', () => {
+       // Toggle notification container visibility
+       notificationContainer.classList.toggle('show');
+   });
+</script>
 
          <form action="" class="header__search">
             <i class="ri-search-line"></i>
