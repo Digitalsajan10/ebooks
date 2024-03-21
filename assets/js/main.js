@@ -158,3 +158,16 @@ var swiper = new Swiper(".blogs-slider", {
     },
   },
 });
+
+// JavaScript code
+
+// Function to show sign-up form when "create one" link is clicked
+document.querySelector(".login-form-container p a").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent the default behavior of the link
+  document.querySelector(".signup-form-container").style.display = "block"; // Show the sign-up form
+});
+
+// Function to close sign-up form
+document.querySelector("#close-signup-btn").addEventListener("click", function() {
+  document.querySelector(".signup-form-container").style.display = "none"; // Hide the sign-up form
+});
