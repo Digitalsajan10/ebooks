@@ -159,15 +159,19 @@ var swiper = new Swiper(".blogs-slider", {
   },
 });
 
-// JavaScript code
+<!-- JavaScript code -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the login form container, forget password link, and password reset form container
+    var loginFormContainer = document.querySelector(".login-form-container");
+    var forgetPasswordLink = document.getElementById("forget-password-link");
+    var passwordResetFormContainer = document.querySelector(".password-reset-form-container");
 
-// Function to show sign-up form when "create one" link is clicked
-document.querySelector(".login-form-container p a").addEventListener("click", function(event) {
-  event.preventDefault(); // Prevent the default behavior of the link
-  document.querySelector(".signup-form-container").style.display = "block"; // Show the sign-up form
+    // Add event listener to the forget password link
+    forgetPasswordLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default action of the anchor tag
+        loginFormContainer.style.display = "none"; // Hide the login form container
+        passwordResetFormContainer.style.display = "block"; // Show the password reset form container
+    });
 });
-
-// Function to close sign-up form
-document.querySelector("#close-signup-btn").addEventListener("click", function() {
-  document.querySelector(".signup-form-container").style.display = "none"; // Hide the sign-up form
-});
+</script>

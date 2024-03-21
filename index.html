@@ -66,13 +66,12 @@
     <a href="#feedback" class="fas fa-feedback"></a>
 </nav>
 
-<!-- login form  -->
-
+<!-- login form starts -->
 <div class="login-form-container">
 
     <div id="close-login-btn" class="fas fa-times"></div>
 
-    <form action="">
+    <form id="login-form">
         <h3>sign in</h3>
         <span>username</span>
         <input type="email" name="" class="box" placeholder="enter your email" id="">
@@ -83,26 +82,41 @@
             <label for="remember-me"> remember me</label>
         </div>
         <input type="submit" value="sign in" class="btn">
-        <p>forget password ? <a href="#">click here</a></p>
-        <p>don't have an account ? <a href="#">create one</a></p>
+        <p>forget password ? <a href="#" id="forget-password-link">click here</a></p>
+        <p>don't have an account ? <a href="#" id="register-link">create one</a></p>
     </form>
 
 </div>
-<!-- signup form  -->
+<!-- login form ends -->
+
+<!-- password reset form starts -->
+<div class="password-reset-form-container" style="display: none;">
+    <div id="close-password-reset-btn" class="fas fa-times"></div>
+    <form id="password-reset-form">
+        <h3>Reset Password</h3>
+        <span>Email</span>
+        <input type="email" name="email" class="box" placeholder="Enter your email" id="reset-email">
+        <input type="submit" value="Reset Password" class="btn">
+    </form>
+</div>
+<!-- password reset form ends -->
+
+<!-- signup form starts -->
 <div class="signup-form-container" style="display: none;">
     <div id="close-signup-btn" class="fas fa-times"></div>
-    <form action="">
+    <form id="signup-form">
         <h3>Sign Up</h3>
         <span>Full Name</span>
-        <input type="text" name="fullname" class="box" placeholder="Enter your full name" id="">
+        <input type="text" name="fullname" class="box" placeholder="Enter your full name" id="signup-fullname">
         <span>Email</span>
-        <input type="email" name="email" class="box" placeholder="Enter your email" id="">
+        <input type="email" name="email" class="box" placeholder="Enter your email" id="signup-email">
         <span>Password</span>
-        <input type="password" name="password" class="box" placeholder="Enter your password" id="">
+        <input type="password" name="password" class="box" placeholder="Enter your password" id="signup-password">
         <input type="submit" value="Sign Up" class="btn">
     </form>
 </div>
 <!-- signup form ends -->
+
 
 <!-- home section starts  -->
 
