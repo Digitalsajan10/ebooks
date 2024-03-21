@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Feedback Form</h2>
+    <form id="feedback-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var feedbackForm = document.getElementById("feedback-form");
+
+            feedbackForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // You can handle form submission here, for example, by sending data to a server via AJAX
+
+                // For demonstration purposes, let's log the form data to the console
+                var formData = new FormData(feedbackForm);
+                for (var pair of formData.entries()) {
+                    console.log(pair[0] + ': ' + pair[1]);
+                }
+
+                // Optionally, you can display a success message or redirect the user after form submission
+                alert("Thank you for your feedback!");
+                feedbackForm.reset(); // Clear the form fields
+            });
+        });
+    </script>
+</body>
+</html>
